@@ -35,8 +35,12 @@ gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'jquery-rails'
 gem 'devise'
+gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap4'
 gem 'html2haml'
 #part 2 photagram
+gem 'kaminari', '~> 0.16.3'
+gem 'jquery-turbolinks'
+#part 3 photagram
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
