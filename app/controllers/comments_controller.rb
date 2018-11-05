@@ -37,6 +37,8 @@ class CommentsController < ApplicationController
     end
   end
 
+  def like
+  end
 
   private
 

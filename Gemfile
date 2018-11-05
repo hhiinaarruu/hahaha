@@ -41,6 +41,8 @@ gem 'html2haml'
 gem 'kaminari', '~> 0.16.3'
 gem 'jquery-turbolinks'
 #part 3 photagram
+gem 'acts_as_votable', '~> 0.10.0'
+#part 4 photagram
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
