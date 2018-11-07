@@ -14,7 +14,6 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.build(post_params)
-    binding.pry
     if @post.save
       flash[:success] = "Your post has been created!"
       redirect_to posts_path
@@ -44,7 +43,6 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-
     @post.destroy
 
     redirect_to posts_path
@@ -52,23 +50,24 @@ class PostsController < ApplicationController
 
   def like
     if @post.liked_by current_user
-        respond_to do |format|
-          format.html { redirect_to :back }
-          format.js
-        end
+      respond_to do |format|
+        format.html { redirect_to :back }
+        format.js
+      end
     end   
   end
 
   def owned_post
-  unless current_user == @post.user
+    unless current_user == @post.user
 
-    flash[:alert] = "That post doesn't belong to you!"
+      flash[:alert] = "That post doesn't belong to you!"
 
-    redirect_to root_path
-  end  
-end
+      redirect_to root_path
+    end  
+  end
 
   private
+
   def post_params    
     params.require(:post).permit(:image, :caption)
   end

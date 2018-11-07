@@ -8,6 +8,10 @@ body {
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
+input {
+  max-width: 100%;
+}
+
 .alert {
   margin-bottom: 0px;
 }
@@ -52,6 +56,7 @@ body {
   border-radius: 3px;
   border-width: 1px;
   margin-bottom: 60px;
+
   .post-head {
     flex-direction: row;
     height: 64px;
@@ -61,17 +66,21 @@ body {
     color: #125688;
     font-size: 15px;
     line-height: 18px;
+
     .user-name, .time-ago {
       display: inline;
     }
+
     .user-name {
       font-weight: 500;
     }
+
     .time-ago {
       color: #A5A7AA;
       float: right;
     }
   }
+
   .image {
     border-bottom: 1px solid #eeefef;
     border-top: 1px solid #eeefef;
@@ -79,45 +88,50 @@ body {
 }
 
   
-  .input-lg {
+.input-lg {
   width: 300px;
   margin-top :15px;
   margin-bottom :15px;
 }
 
-
 .post-bottom {
   .user-name, .comment-content {
     display: inline;
   }
+
   .caption {
     margin-bottom: 7px;
   }
+
   .user-name {
     font-weight: 500;
     color: #125688;
     font-size: 15px;
   }
+
   .user-name, .caption-content {
     display: inline;
   }
+
   #comment {
     margin-top: 7px;
+    margin-bottom: 7px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    line-height: 18px;
+
     .user-name {
       font-weight: 500;
       margin-right: 0.3em;
     }
+
     .delete-comment {
       float: right;
       color: #515151;
     }
   }
-  margin-bottom: 7px;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 10px;
-  font-size: 15px;
-  line-height: 18px;
 }
 
 .comment_content {
@@ -203,7 +217,8 @@ body {
   display: table;
   border: 2px solid #4090DB;
   border-radius: 50%;
-  :hover {
+
+  &:hover {
     border: 1px solid #2D6DA8;
     border-radius: 50%;
   }
@@ -215,7 +230,8 @@ body {
   padding: 0px 9px;
   vertical-align: middle;
   text-decoration: none;
-  a :hover {
+
+  a:hover {
     color: #2D6DA8;
   }
 }
@@ -223,6 +239,7 @@ body {
 .comments {
   .paginator {
     margin: 0.5em;
+    
     .more-comments {
       color: #A5A7AA;
     }
