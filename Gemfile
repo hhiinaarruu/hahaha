@@ -32,7 +32,7 @@ gem 'paperclip', '~> 4.2' #at the writing of this post
 gem 'simple_form'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'bootstrap-sass', '~> 3.3.5'
+gem 'bootstrap-sass', '3.3.3'
 gem 'jquery-rails'
 gem 'devise'
 gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap4'
