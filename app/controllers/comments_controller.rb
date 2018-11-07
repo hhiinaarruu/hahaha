@@ -1,7 +1,6 @@
 class CommentsController < ApplicationController
   before_action :set_post
 
-
   def index
     @comments = @post.comments.order("created_at ASC")
 
@@ -13,6 +12,7 @@ class CommentsController < ApplicationController
   def create
     @comment = @post.comments.build(comment_params)
     @comment.user_id = current_user.id
+
 
     if @comment.save
       respond_to do |format|

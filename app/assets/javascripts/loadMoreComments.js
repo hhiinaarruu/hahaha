@@ -14,7 +14,7 @@ function ClickableCommentsLink(){
 }
 
 function DestroyComments(){
-  $('.delete-comment').click( function() {
+  $('.delete-comament').click( function() {
     Append.id = this;
     Append.post_id = $(this).data("post-id");
     Append.comment_count = $(this).data("value");
