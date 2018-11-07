@@ -41,7 +41,7 @@ describe CommentsController do
   
    describe '#destroy' do
      def do_request
-       delete :destroy, params: { post_id: my1_post.id, comment: my1_comment_params ,id: params }
+       delete :destroy, params: { post_id: my1_post.id, id: params }
      end
 
     let!(:user) { create(:user) }
