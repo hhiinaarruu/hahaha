@@ -44,6 +44,7 @@ gem 'jquery-turbolinks'
 gem 'acts_as_votable', '~> 0.10.0'
 #part 4 photagram
 # Reduces boot times through caching; required in config/boot.rb
+gem 'seed_dump'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
