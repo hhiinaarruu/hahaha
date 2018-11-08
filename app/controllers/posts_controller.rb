@@ -57,6 +57,15 @@ class PostsController < ApplicationController
     end   
   end
 
+  def unlike
+    if @post.unliked_by current_user
+      respond_to do |format|
+        format.js
+        format.html { redirect_to :back }
+      end
+    end
+  end
+
   def owned_post
     unless current_user == @post.user
 

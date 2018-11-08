@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe ProfilesController do
 
- describe '#update' do
+  describe '#update' do
     def do_request
       put :update, params: { user_name: user_name}
     end

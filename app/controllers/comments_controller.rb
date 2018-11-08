@@ -36,9 +36,6 @@ class CommentsController < ApplicationController
     end
   end
 
-  def like
-  end
-
   private
 
   def comment_params
