@@ -87,7 +87,7 @@ input {
   }
 }
 
-  
+
 .input-lg {
   width: 300px;
   margin-top :15px;
@@ -239,7 +239,7 @@ input {
 .comments {
   .paginator {
     margin: 0.5em;
-    
+
     .more-comments {
       color: #A5A7AA;
     }
@@ -291,4 +291,11 @@ input {
 .likes {
   margin-top: 20px;
   margin-bottom: 7px;
+   text-decoration: none;
+  color: red;
+}
+
+.like-button a:hover, a:focus {
+  text-decoration: none;
+  color: red;
 }

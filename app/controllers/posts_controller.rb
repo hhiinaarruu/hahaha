@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_action :set_post, only: [:show, :edit, :update, :destroy, :like]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :like ,:unlike]
   before_action :authenticate_user!
   before_action :owned_post, only: [:edit, :update, :destroy]
 
@@ -18,7 +18,7 @@ class PostsController < ApplicationController
       flash[:success] = "Your post has been created!"
       redirect_to posts_path
     else
-      flash.now[:alert] = "Your new post couldn't be created!  Please check the form."      
+      flash.now[:alert] = "Your new post couldn't be created!  Please check the form."
       render :new
     end
   end
@@ -38,7 +38,7 @@ class PostsController < ApplicationController
     else
       flash.now[:alert] = "Update failed.  Please check the form."
       render :edit
-    end    
+    end
   end
 
   def destroy
@@ -54,7 +54,7 @@ class PostsController < ApplicationController
         format.html { redirect_to :back }
         format.js
       end
-    end   
+    end
   end
 
   def unlike
@@ -72,16 +72,16 @@ class PostsController < ApplicationController
       flash[:alert] = "That post doesn't belong to you!"
 
       redirect_to root_path
-    end  
+    end
   end
 
   private
 
-  def post_params    
+  def post_params
     params.require(:post).permit(:image, :caption)
   end
 
-  def set_post   
-    @post = Post.find(params[:id]) 
+  def set_post
+    @post = Post.find(params[:id])
   end
 end
