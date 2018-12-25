@@ -100,7 +100,10 @@ input {
   }
 
   .caption {
-    margin-bottom: 7px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 15px;
+    margin-left: 5px;
   }
 
   .user-name {
@@ -237,6 +240,7 @@ input {
 }
 
 .comments {
+  margin-top: 25px;
   .paginator {
     margin: 0.5em;
 
